@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#030806" />
+  <title>ECHONOMY // Trace the DNA Inside the Track</title>
+  <meta name="description" content="Trace the samples, interpolations, and musical ancestry living inside your Spotify playlists." />
+  <meta property="og:title" content="ECHONOMY" />
+  <meta property="og:description" content="Nothing you hear begins here. Trace the DNA inside the track." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://echonomy.limiliminal.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="virus-field" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-head">
+    <button class="wordmark" id="home-btn" aria-label="ECHONOMY - home">
+      <span class="wordmark-mark" aria-hidden="true">
+        <i></i><i></i><i></i>
+      </span>
+      <span>ECHONOMY</span>
+      <small>v2.6</small>
+    </button>
+    <div class="system-state" aria-hidden="true">
+      <span><i class="status-dot"></i> GENIUS_LINK</span>
+      <span>TRACE_MODE: ACTIVE</span>
+    </div>
+    <div class="head-right" id="head-right"></div>
+  </header>
+
+  <main id="main">
+    <section class="view view--landing" id="view-landing">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal-up">[ AUDIO FORENSICS / ROOT ACCESS ]</p>
+          <h1 class="hero-title" aria-label="Trace the DNA inside the track">
+            <span class="reveal-up d1">TRACE THE</span>
+            <span class="glitch reveal-up d2" data-text="DNA">DNA</span>
+            <span class="reveal-up d3">INSIDE THE TRACK</span>
+          </h1>
+          <p class="hero-sub reveal-up d4">
+            Infect a playlist. Expose the samples, interpolations, and musical ghosts
+            living below its waveform. Then compile the roots into a new Spotify playlist.
+          </p>
+          <div class="hero-ctas reveal-up d5">
+            <button class="btn btn--primary" id="cta-spotify"><span>01</span> LINK SPOTIFY</button>
+            <button class="btn btn--ghost" id="cta-demo"><span>02</span> RUN DEMO SCAN</button>
+          </div>
+          <p class="hero-note reveal-up d6" id="hero-note"></p>
+        </div>
+
+        <div class="helix-console reveal-up d4" aria-hidden="true">
+          <div class="console-head"><span>GENOME_VIEWER.exe</span><span>LIVE</span></div>
+          <div class="helix-wrap">
+            <svg class="helix" viewBox="0 0 360 420" role="img">
+              <defs>
+                <linearGradient id="helixA" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#b6ff00" />
+                  <stop offset="1" stop-color="#00f0ff" />
+                </linearGradient>
+                <linearGradient id="helixB" x1="1" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#ff2bd6" />
+                  <stop offset="1" stop-color="#7b5cff" />
+                </linearGradient>
+              </defs>
+              <path class="helix-path helix-a" d="M95 12 C290 65 290 145 95 205 C-5 250 -5 340 205 410" />
+              <path class="helix-path helix-b" d="M205 12 C-5 75 -5 145 205 205 C305 250 305 340 95 410" />
+              <g class="helix-rungs">
+                <path d="M111 40 L186 40"/><path d="M160 75 L239 75"/><path d="M188 112 L248 112"/>
+                <path d="M158 149 L220 149"/><path d="M104 184 L184 184"/><path d="M73 220 L215 220"/>
+                <path d="M64 260 L194 260"/><path d="M88 300 L150 300"/><path d="M120 340 L180 340"/>
+                <path d="M164 380 L234 380"/>
+              </g>
+            </svg>
+            <div class="target-ring ring-a"></div>
+            <div class="target-ring ring-b"></div>
+            <span class="helix-label label-a">VOCAL_FRAGMENT</span>
+            <span class="helix-label label-b">DRUM_BREAK</span>
+            <span class="helix-label label-c">MELODIC_ECHO</span>
+          </div>
+          <div class="console-log">
+            <span>&gt; carrier signal acquired</span>
+            <span>&gt; ancestry nodes resolving...</span>
+            <span class="blink">&gt; awaiting playlist injection_</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-marquee" aria-hidden="true">
+        <div class="marquee-track" id="marquee-track"></div>
+      </div>
+    </section>
+
+    <section class="view view--feed" id="view-demo" hidden>
+      <div class="feed-head">
+        <div class="feed-index">/DEMO_ARCHIVE</div>
+        <p class="feed-kicker">KNOWN DNA SIGNATURES</p>
+        <h2 class="feed-title">THE ROOTS ARE<br /><em>ALREADY INSIDE.</em></h2>
+        <p class="feed-sub">Decrypt each case file to expose the source material under the waveform.</p>
+      </div>
+      <div class="feed" id="demo-feed"></div>
+    </section>
+
+    <section class="view view--feed" id="view-library" hidden>
+      <div class="feed-head feed-head--library">
+        <div class="feed-index">/AUTHORIZED_LIBRARY</div>
+        <p class="feed-kicker" id="library-kicker">SPOTIFY UPLINK ESTABLISHED</p>
+        <h2 class="feed-title" id="library-title">SELECT A HOST.</h2>
+        <p class="feed-sub" id="library-sub"></p>
+        <div class="source-picker" id="source-picker"></div>
+        <div class="scanbar" id="scanbar" hidden>
+          <div class="scanbar-grid" aria-hidden="true"></div>
+          <div class="scanbar-fill" id="scanbar-fill"></div>
+          <span class="scanbar-label" id="scanbar-label"></span>
+        </div>
+
+        <aside class="playlist-forge" id="playlist-forge" hidden>
+          <div class="forge-copy">
+            <span class="forge-label">ROOTKIT_COMPILER</span>
+            <strong id="forge-title">Build a playlist from the source DNA.</strong>
+            <p id="forge-copy">Actual samples only. Interpolations and self-references stay out.</p>
+          </div>
+          <div class="forge-actions">
+            <span class="forge-count" id="forge-count">0 ROOTS</span>
+            <button class="btn btn--toxic" id="create-roots-playlist">COMPILE TO SPOTIFY</button>
+          </div>
+          <p class="forge-status" id="forge-status" aria-live="polite"></p>
+        </aside>
+      </div>
+      <div class="feed" id="library-feed"></div>
+      <div class="feed-rest" id="library-rest"></div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <span>ECHONOMY // AUDIO_LINEAGE_PROTOCOL</span>
+    <p>Relationships come from community-maintained Genius data. Samples, interpolations, and self-references are labeled separately; always verify the source link.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

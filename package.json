@@ -1,0 +1,19 @@
+{
+    "name": "echonomy",
+    "version": "1.0.0",
+    "description": "Every song you love is haunted by another - see the samples inside your Spotify library",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "check": "node --check server.js && node --check public/app.js && node --check netlify/functions/api.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "dependencies": {
+        "dotenv": "^17.4.2",
+        "express": "^5.2.1",
+        "serverless-http": "^4.0.0"
+    }
+}

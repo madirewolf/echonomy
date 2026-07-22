@@ -1,0 +1,32 @@
+[build]
+  command = "echo Netlify function bundle ready"
+  publish = "public"
+
+[functions]
+  directory = "netlify/functions"
+  external_node_modules = ["express", "serverless-http"]
+  included_files = ["data/demo.json"]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/callback"
+  to = "/index.html"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; media-src https://audio-ssl.itunes.apple.com; frame-src https://open.spotify.com https://www.youtube-nocookie.com; connect-src 'self' https://accounts.spotify.com https://api.spotify.com; form-action 'self'; upgrade-insecure-requests"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Referrer-Policy = "no-referrer"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
